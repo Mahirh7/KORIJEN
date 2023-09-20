@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korijeni u Matematici</title>
+    <!-- Uključivanje Bootstrap CSS-a -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body  style="background-color:#D5FFFF;">
+
+<!-- Navigacijska traka -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Korijeni u Matematici</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Početna <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#osnove">Osnove</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        href="#primjeri">Primjeri</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#kalkulator">Kalkulator</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Glavni sadržaj -->
+<div class="container mt-4">
+    <h1  style="text-align: center;">Početna</h1>
+    <p>
+        Na ovoj stranici ćemo detaljno razgovarati o korijenima u matematici i kako ih računati. Korijeni su važan koncept u matematici i često se koriste u različitim područjima kao što su algebra, analiza i geometrija.
+    </p>
+
+    <h2 id="osnove" style="text-align: center;">Osnove Korijena</h2>
+    <p>
+        Korijen je matematička operacija koja ima suprotni efekat od stepenovanja. Kvadratni korijen broja x označava se kao √x i predstavlja broj koji, kada se pomnoži sam sa sobom, daje x. Na primjer, √9 = 3 jer je 3 * 3 = 9.
+    </p>
+    <p>
+        Osnovne vrste korijena uključuju kvadratni korijen (√x), kubni korijen (∛x) i opći n-ti korijen (∛x), gdje n predstavlja stepen korijena.
+    </p>
+
+    <h2 id="primjeri" style="text-align: center;">Primjeri Korijena</h2>
+    <p>
+        Evo nekoliko primjera računanja korijena:
+    </p>
+    <ul>
+        <li>Kvadratni korijen od 16: √16 = 4</li>
+        <li>Kubni korijen od 27: ∛27 = 3</li>
+        <li>Četvrti korijen od 81: ∜81 = 3</li>
+    </ul>
+    <!-- Dodajte slike i dodatne informacije o korijenima prema potrebi -->
+
+</div>
+
+
+<!-- Uključivanje Bootstrap JavaScripta (potrebno za Bootstrap komponente koje koriste JavaScript) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Kalkulator Korijena -->
+<h2 id="kalkulator" style="text-align:
+center;">Kalkulator Korijena</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputNumber">Unesite broj:</label>
+                <input type="number" class="form-control" id="inputNumber" placeholder="Unesite broj">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputDegree">Unesite stepen korijena:</label>
+                <input type="number" class="form-control" id="inputDegree" placeholder="Unesite stepen korijena">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button  class="btn btn-primary" onclick="calculateRoot()">Izračunaj Korijen</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <h4>Rezultat:</h4>
+            <p id="result"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calculateRoot() {
+        // Dohvati unesene vrijednosti
+        var inputNumber = parseFloat(document.getElementById("inputNumber").value);
+        var inputDegree = parseFloat(document.getElementById("inputDegree").value);
+
+        // Izračunaj korijen
+        var result = Math.pow(inputNumber, 1 / inputDegree);
+
+        // Prikazi rezultat
+        document.getElementById("result").innerText = "Rezultat: " + result;
+    }
+</script>
+<footer class="footer mt-5">
+    <div class="container">
+        <p style="text-align: center;">&copy; 2023 <b>mahir.hodzic@ses.edu.ba</b> Sva prava zadržana</p>
+    </div>
+</footer>
+</body>
+</html>
